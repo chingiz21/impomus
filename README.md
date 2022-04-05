@@ -2,8 +2,8 @@
 
 ## Browser extension(Chrome)
 
-![](https://github.com/chingiz21/impomus/tree/main/client/src/imgs/forReadme/browser_extension.gif)
+![browser-extension](https://github.com/chingiz21/impomus/blob/main/client/src/imgs/forReadme/browser_extension.gif)
 
 ## Client-side
 
-![](https://github.com/chingiz21/impomus/tree/main/client/src/imgs/forReadme/client-side.gif)
+![client-side](https://github.com/chingiz21/impomus/blob/main/client/src/imgs/forReadme/client-side.gif)
