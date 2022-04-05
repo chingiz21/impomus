@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 105px 150px 30px 150px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-container-img {
+    width: 496px;
+    height: 496px;
+    background-image: url('../../imgs/mainPage/Saly-10.png');
+}
+
+.content-container-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: space-between; */
+    margin-right: 15px;
+}
+
+.descr-mainPage {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.start {
+    width: 200px;
+    height: 60px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #202186;
+    border-radius: 20px;
+    background-color: #5EF2E9;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.start:hover {
+    background-color: #0fe4d6;
+    transition: all .3s ease;
+}

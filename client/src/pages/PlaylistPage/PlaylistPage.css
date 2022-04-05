@@ -1,0 +1,120 @@
+.service-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-container_mainContent {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    width: 700px;
+    padding: 70px 30px 20px 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.service-container_mainContent-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-container_mainContent-descr {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 33px 0;
+    color: #5EF2E9;
+}
+
+.service-container_mainContent-list {
+    display: flex;
+    width: 700px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service-container_mainContent-list a {
+    width: 111px;
+    height: 111px;
+    /* margin-right: 40px; */
+}
+
+.service-container_mainContent-title_list {
+    display: flex;
+    margin-left: 90px;
+}
+
+.unactive .service-container_mainContent-title_list-item {
+    background-color: #383ADC;
+}
+
+.service-container_mainContent-title_list .service-container_mainContent-title_list-item {
+    display: flex;
+    margin-right: 80px;
+    text-align: center;
+    width: 70px;
+    height: 60px;
+    background-color: #52D9D1;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.service-container_mainContent-title_list:last-child {
+    margin-right: 0;
+}
+
+.service-container_mainContent-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+.service-container_mainContent-list_item {
+    display: flex;
+    align-items: center;
+    /* width: 400px; */
+    height: 105px;
+    border: 1px solid #fff;
+    margin-bottom: 15px;
+}
+
+.service-container_mainContent-list_item-img {
+    /* width: 124px; */
+    height: 103px;
+    /* margin-right: 10px; */
+    /* background-image: url('../../imgs/playlistsPage/bx_bxs-playlist.png'); */
+}
+
+.service-container_mainContent-list_item-text {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 250px;
+}
+
+.service-container_mainContent-list_item-text_title {
+    margin-bottom: 12px;
+    margin-left: 5px;
+}
+
+.service-container_mainContent-list_item-text_button {
+    width: 100%;
+    height: 70px;
+    background-color: #383ADC;
+    /* border-radius: 20px; */
+    border: none;
+    outline: none;
+}
+
+.service-container_mainContent-list_item-text_button:hover {
+    cursor: pointer;
+    background-color: #5EF2E9;
+    transition: all .3s ease;
+}

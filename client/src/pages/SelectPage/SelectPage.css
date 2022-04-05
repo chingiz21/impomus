@@ -1,0 +1,94 @@
+.service-container-selectPage {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-container_mainContent {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    width: 700px;
+    padding: 70px 30px 20px 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.service-container_mainContent-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-container_mainContent-descr {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 33px 0;
+    color: #5EF2E9;
+}
+
+.service-container_mainContent-list-selectPage {
+    display: flex;
+    width: 700px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-container_mainContent-list a {
+    width: 111px;
+    height: 111px;
+    margin-right: 40px;
+}
+
+.service-container_mainContent-title_list {
+    display: flex;
+    margin-left: 90px;
+}
+
+.service-container_mainContent-title_list .service-container_mainContent-title_list-item {
+    display: flex;
+    margin-right: 80px;
+    text-align: center;
+    width: 70px;
+    height: 60px;
+    background-color: #52D9D1;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.unactive {
+    background: #383ADC;
+}
+
+.service-container_mainContent-title_list:last-child {
+    margin-right: 0;
+}
+
+.service-container_imgLeft {
+    width: 346px;
+    height: 346px;
+    background-image: url('../../imgs/servicePage/Saly-2.png');
+}
+
+.service-container_imgRight {
+    width: 305px;
+    height: 505px;
+    background-image: url('../../imgs/servicePage/Saly-3.png');
+}
+
+.img {
+    width: 111px;
+    height: 113px;
+    background-image: url('../../imgs/music-services/spotify.png');
+}
+
+#fileSystem {
+    background-image: url('../../imgs/music-services/icons8-file-128.png');
+}
+
+.subtitle {
+    margin-left: 19px;
+}

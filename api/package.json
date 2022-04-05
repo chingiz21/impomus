@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js",
+    "server2": "nodemon indexC.js"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "googleapis": "^98.0.0",
+    "nodemon": "^2.0.15",
+    "qs": "^6.10.3",
+    "request": "^2.88.2",
+    "spotify-web-api-node": "^5.0.2"
+  }
+}
