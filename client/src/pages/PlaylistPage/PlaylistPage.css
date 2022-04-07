@@ -79,15 +79,15 @@
 .service-container_mainContent-list_item {
     display: flex;
     align-items: center;
-    /* width: 400px; */
+    width: 355px;
     height: 105px;
     border: 1px solid #fff;
     margin-bottom: 15px;
 }
 
 .service-container_mainContent-list_item-img {
-    /* width: 124px; */
-    height: 103px;
+    width: 125px;
+    height: 104px;
     /* margin-right: 10px; */
     /* background-image: url('../../imgs/playlistsPage/bx_bxs-playlist.png'); */
 }

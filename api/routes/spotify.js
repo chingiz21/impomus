@@ -3,14 +3,15 @@ const dotenv = require('dotenv');
 const spotifyWebApi = require('spotify-web-api-node');
 dotenv.config();
 const credentials = {
-    clientId: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET,
-    redirectUri: 'http://localhost:8888/playlists',
+    clientId: process.env.SPOTIFY_CLIENT_ID,
+    clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+    redirectUri: process.env.SPOTIFY_REDIRECT_URI
 };
 
 router.get('/login', (req, res) => {
     var scope = 'user-read-email \
-                 user-read-private';
+                 user-read-private \
+                 playlist-read-private';
 
     var auth_query_parameters = new URLSearchParams({
         response_type: "code",
@@ -27,7 +28,6 @@ router.post('/token', (req, res) => {
     const code = req.query.code
 
     spotifyApi.authorizationCodeGrant(code).then((data) => {
-
         res.json({
             accessToken: data.body.access_token,
             refreshToken: data.body.refresh_token,

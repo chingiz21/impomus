@@ -11,6 +11,6 @@ export const playlistsReducer = (state = defaultState, action) => {
         default:
             return state;
     }
-}
+};
 
 export const setUserPlaylists = (playlists) => ({type: SET_USER_PLAYLISTS, payload: playlists});

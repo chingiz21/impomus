@@ -1,8 +1,8 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin: 105px 150px 30px 150px;
+    justify-content: center;
+    margin: 70px 150px 30px 150px;
 }
 
 .content-container {

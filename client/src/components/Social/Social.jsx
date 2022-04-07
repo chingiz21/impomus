@@ -1,8 +1,7 @@
 import { Facebook, Instagram, Twitter } from "@mui/icons-material";
-import { Link } from 'react-router-dom';
-import './Footer.css';
+import './Social.css';
 
-const Footer = () => {
+const Social = () => {
     return (
         <div className="footer-wrapper">
             <footer className="footer">
@@ -16,12 +15,9 @@ const Footer = () => {
                     <Facebook sx={{ "&:hover": { fill: "#5AE5E3" } }} />
                 </a>
             </footer>
-            <Link to='/' className="nav-links">MainPage</Link>
-            <Link to='/services' className="nav-links">ServicePage</Link>
-            <Link to='/playlists' className="nav-links">PlaylistPage</Link>
-            <Link to='/success' className="nav-links">Success</Link>
+            
         </div>
     )
 }
 
-export default Footer;
+export default Social;

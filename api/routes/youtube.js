@@ -1,16 +1,13 @@
 const router = require('express').Router();
 const dotenv = require('dotenv');
 const { google } = require('googleapis');
+const Youtube = require('../core/Youtube');
 dotenv.config();
-
-youtube_clientId = process.env.YOUTUBE_CLIENT_ID;
-youtube_clientSecret = process.env.YOUTUBE_CLIENT_SECRET;
-youtube_redirectUrl = process.env.YOUTUBE_REDIRECT_URI;
 
 let tracks;
 let playlist;
 
-router.get('/login', (req, res) => {
+router.use('/login', (req, res) => {
     playlist = req.body;
 
     tracks = playlist.tracks.items.map(item =>
@@ -18,9 +15,9 @@ router.get('/login', (req, res) => {
     );
 
     const oauth2Client = new google.auth.OAuth2(
-        youtube_clientId,
-        youtube_clientSecret,
-        youtube_redirectUrl
+        process.env.YOUTUBE_CLIENT_ID,
+        process.env.YOUTUBE_CLIENT_SECRET,
+        process.env.YOUTUBE_REDIRECT_URI
     );
 
     const scopes = [
@@ -38,16 +35,16 @@ router.get('/login', (req, res) => {
     res.send({ authorizationUrl });
 });
 
-router.post('/import', async (req, res) => {
+router.use('/import', async (req, res) => {
     let code = req.query.code;
     let youtube = new Youtube('https://www.googleapis.com/youtube/v3/');
 
     const arrLength = tracks.length;
 
     const oauth2Client = new google.auth.OAuth2(
-        youtube_clientId,
-        youtube_clientSecret,
-        youtube_redirectUrl
+        process.env.YOUTUBE_CLIENT_ID,
+        process.env.YOUTUBE_CLIENT_SECRET,
+        process.env.YOUTUBE_REDIRECT_URI
     );
 
     const token = await oauth2Client.getToken(code)
@@ -59,7 +56,7 @@ router.post('/import', async (req, res) => {
     try {
 
         youtube.createPlaylist(playlist.name, playlist.description, token).then(() => youtube.searchAndAddTrack(0, arrLength, tracks, token)).then(response => {
-            res.redirect('http://localhost:8888/playlists');
+            res.redirect('http://localhost:3000/playlists');
         })
 
         /* ---------------------EXAMPLE OF SEARCHING TRACK--------------------- */

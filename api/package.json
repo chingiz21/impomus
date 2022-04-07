@@ -2,7 +2,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon index.js",
-    "server2": "nodemon indexC.js"
+    "server2": "nodemon oldServer.js"
   },
   "dependencies": {
     "axios": "^0.26.1",

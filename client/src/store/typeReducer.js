@@ -11,6 +11,6 @@ export const typeReducer = (state = defaultState, action) => {
         default:
             return state;
     }
-}
+};
 
 export const setImportType = (type) => ({type: SET_IMPORT_TYPE, payload: type});

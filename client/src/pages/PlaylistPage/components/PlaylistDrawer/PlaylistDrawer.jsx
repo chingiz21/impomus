@@ -4,11 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setVisibleAction } from '../../../../store/drawerReducer';
 import TrackRow from './components/TrackRow';
 import axios from 'axios';
+import React from 'react';
 
 const PlaylistDrawer = () => {
   const dispatch = useDispatch();
-  const visibleState = useSelector(state => state.buttonVisibility.visibility);
-  const playlist = useSelector(state => state.buttonVisibility.playlist);
+  const visibleState = useSelector(state => state.drawer.visibility);
+  const playlist = useSelector(state => state.drawer.playlist);
   const importType = useSelector(state => state.importType.type);
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -38,7 +39,6 @@ const PlaylistDrawer = () => {
         <Drawer
           anchor='left'
           open={visibleState}
-          // onClose={dispatch(setVisibleAction(false))}
           onClose={toggleDrawer('left', false)}
           PaperProps={{ sx: { width: 500, backgroundColor: '#202186' } }}
         >
@@ -77,4 +77,4 @@ const PlaylistDrawer = () => {
   }
 }
 
-export default PlaylistDrawer;
+export default React.memo(PlaylistDrawer);

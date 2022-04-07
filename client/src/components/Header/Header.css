@@ -1,0 +1,26 @@
+.wrapper__header {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    margin-right: 50px;
+    text-decoration: none;
+}
+
+.nav-links:last-child {
+    margin-right: 0;
+}
+
+.nav-links::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+.nav-links:hover::after {
+    width: 100%;
+}

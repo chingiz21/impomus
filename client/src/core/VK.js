@@ -1,3 +1,5 @@
+// Just script for parsing data from vk.com
+
 let tracks = new Set();
 let nodes = [...document.querySelectorAll('.audio_row')];
 
