@@ -57,31 +57,6 @@
     transition: all .3s ease;
 }
 
-.footer-wrapper {
-    position: absolute;
-    right: 0;
-    bottom: 15px;
-}
-
-.footer {
-    display: flex;
-    justify-content: right;
-    /* margin-top: 90px; */
-}
-
-.footer a {
-    margin-right: 15px;
-}
-
-.footer i:hover {
-    color: #0fe4d6;
-    transition: all .3s ease;
-}
-
-.footer a:last-child {
-    margin-right: 45px;
-}
-
 .descr-successPage-title {
     font-weight: 600;
     font-size: 30px;

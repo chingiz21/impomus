@@ -14,6 +14,10 @@
     transition: all .3s ease;
 }
 
+.drawer__content-descr_wrapper {
+    margin-bottom: 10px;
+}
+
 .drawer__content-table {
     width: 100%;
     border: 1px solid #fff;
@@ -25,10 +29,6 @@
     border: 1px solid #fff;
     padding: 3px;
 }
-
-/* .drawer__content-table td {
-    border: 1px solid #fff;
-} */
 
 .drawer__content_import-button {
     width: 100%;

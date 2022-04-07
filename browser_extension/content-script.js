@@ -12,8 +12,4 @@ window.addEventListener('load', () => {
     })
 
     chrome.runtime.sendMessage({ type: 'FROM_PAGE', tracksArr: arrTracks });
-
-    chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-        console.log(msg.response);
-    });
-})
+});

@@ -1,4 +1,4 @@
-import qs from 'qs';
+// Basic class for requests
 
 export class Request {
     baseurl;
@@ -24,10 +24,6 @@ export class Request {
         .then(responseData => {
             return responseData
         })
-
-        // if (!result.ok) {
-        //     return {error: result.json()};
-        // }
 
         return result;
     }

@@ -1,3 +1,4 @@
+// Modify duration from ms to {minutes:seconds}
 export function getTrackDuration(durationMs) {
     let total = durationMs/1000/60;
     

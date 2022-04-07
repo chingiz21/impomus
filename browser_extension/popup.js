@@ -80,14 +80,12 @@ const parseBtn = document.querySelector('.btn-parse');
 const textArea = document.getElementById('tracks-textarea');
 let arrTracks = [];
 
-var port = chrome.extension.connect({
-    name: "comm"
-});
+let port = chrome.runtime.connect({name: "popup"});
 
 
-port.onMessage.addListener(msg => {
-    // console.log('message received: ' + JSON.stringify(msg.tracksArr));
+port.onMessage.addListener((msg, sender, sendResponse) => {
     arrTracks = msg.tracksArr;
+    sendResponse({content: 'hello from popup'});
 })
 
 

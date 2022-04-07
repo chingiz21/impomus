@@ -1,21 +1,11 @@
-import { Request } from "../core/Request";
+import { Request } from "./Request";
 
 export class Spotify extends Request {
-
-    fetchParams = {
-        method: 'GET',
-        headers: {}
-    };
-
-    postParams = {
-        method: 'POST',
-        headers: {}
-    };
-
     constructor() {
         super('https://api.spotify.com/v1');
     }
 
+    // Async for-loop iterate 
     async searchAndAddTrack(i, length, tracks, params) {
         if (i > length) return;
 
@@ -25,9 +15,12 @@ export class Spotify extends Request {
         }, 100);
     }
 
-
     getUserPlaylistList = (userId, params) => {
         return this.makeRequest(`users/${userId}/playlists`, params);
+    }
+
+    getCurrentUserPlaylistList = (params) => {
+        return this.makeRequest(`me/playlists`, params);
     }
 
     getPlaylist(playlistId, params) {

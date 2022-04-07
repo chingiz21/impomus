@@ -5,7 +5,7 @@ const GET_PLAYLIST_INFO = 'GET_PLAYLIST_INFO';
 const defaultState = {
     visibility: false,
     playlist: {}
-}
+};
 
 export const drawerReducer = (state = defaultState, action) => {
     switch (action.type) {
@@ -20,7 +20,7 @@ export const drawerReducer = (state = defaultState, action) => {
         default:
             return state;
     }
-}
+};
 
 export const setVisibleAction = (visibility) => ({type: SET_VISIBILITY, payload: visibility});
 export const hideDrawer = (visibility) => ({type: HIDE_DRAWER, payload: visibility});

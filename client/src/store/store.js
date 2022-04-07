@@ -8,7 +8,7 @@ import { typeReducer } from './typeReducer';
 
 const rootReducer = combineReducers({
     token: tokenReducer,
-    buttonVisibility: drawerReducer,
+    drawer: drawerReducer,
     userPlaylists: playlistsReducer,
     importType: typeReducer
 })

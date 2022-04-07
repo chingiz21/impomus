@@ -1,3 +1,5 @@
+// NOTE! I didn't use this hook, instead watch spotifyRequests.js
+
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 

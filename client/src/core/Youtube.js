@@ -11,27 +11,22 @@ class Youtube {
 
     async delay(ms) {
         return new Promise((resolve) => {
-          setTimeout(resolve, ms);
+            setTimeout(resolve, ms);
         });
-      };
+    };
 
+    // Async for-loop iterate 
     async searchAndAddTrack(i, length, array, token) {
-        if (i > length-1) {
+        if (i > length - 1) {
             return;
         }
 
         setTimeout(() => {
             this.searchTrack(array[i], token).then((response) => this.addTrack(response, this.playlistId, token));
-            this.searchAndAddTrack(i+1, length, array, token);
+            this.searchAndAddTrack(i + 1, length, array, token);
         }, 1000);
 
     }
-
-    async doYoutubeWork(token, title = 'testPlaylist28.03_11:50', description = 'testDescr28.03_11:50', trackName = "Hoodrich Pablo Juan - We don't luv em") {
-        this.createPlaylist(title, description, token)
-            .then(res => this.searchTrack(trackName, token)
-                .then(res => this.addTrack(res, this.playlistId, token)));
-    };
 
     async createPlaylist(title, description, token) {
         try {
@@ -99,38 +94,3 @@ class Youtube {
 }
 
 module.exports = Youtube;
-
-/*-------------------------HOW TO MAKE ITERATION ASYNC---------------------------------------- */
-
-// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// function delay(ms) {
-//   return new Promise(resolve => {
-//     setTimeout(resolve, ms);
-//   })
-// }
-
-// function createPlaylist() {
-//   return delay(100).then(() => console.log('create'));
-// }
-
-// function searchTrack() {
-//   return delay(100).then(() => console.log('search'));
-// }
-
-// function addTrack() {
-//   return delay(100).then(() => console.log('add'));
-// }
-
-// const doAll = i => {
-//     if (i > arr.length) {
-//         return;
-//     }
-
-//             setTimeout(() => {
-//                searchTrack().then(() => addTrack());
-//                doAll(i+1);
-//             }, 2000)
-// }
-
-// createPlaylist().then(() => doAll(0));

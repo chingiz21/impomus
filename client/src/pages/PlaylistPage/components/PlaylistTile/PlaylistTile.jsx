@@ -1,5 +1,6 @@
+import React from "react";
 import { useDispatch, useSelector } from "react-redux"
-import { Spotify } from "../../../../ServiceFactory/Spotify";
+import { Spotify } from "../../../../core/Spotify";
 import { getPlaylist, setVisibleAction } from "../../../../store/drawerReducer";
 
 const PlaylistTile = ({ playlist, onClick }) => {
@@ -17,14 +18,14 @@ const PlaylistTile = ({ playlist, onClick }) => {
             },
             token: accessToken
     });
-    console.log('tile render');
+
     response.then(playlist => {
       dispatch(getPlaylist(playlist));
     })
     setTimeout(() => {
       dispatch(setVisibleAction(true));
     }, 300);
-  }
+  };
 
   return (
     <div className="service-container_mainContent-list_item">
@@ -37,4 +38,4 @@ const PlaylistTile = ({ playlist, onClick }) => {
   )
 }
 
-export default PlaylistTile
+export default React.memo(PlaylistTile)
