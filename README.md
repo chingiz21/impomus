@@ -1,5 +1,9 @@
 # impomus
 
+## Description
+
+Import your playlists from Spotify to Youtube
+
 ## Used technologies:
 
 - NodeJS
@@ -16,10 +20,10 @@
 - <code>/browser-extension</code> - extension for Chrome
 - <code>/client</code> - client side 
 
-## Browser extension(Chrome)
+### Browser extension(Chrome)
 
 ![browser-extension](https://github.com/chingiz21/impomus/blob/main/client/src/imgs/forReadme/browser_extension.gif)
 
-## Client-side
+### Client-side
 
-![client-side](https://github.com/chingiz21/impomus/blob/main/client/src/imgs/forReadme/client-side.gif)
+![client-side](https://github.com/chingiz21/impomus/blob/main/client/src/imgs/forReadme/client.gif)
