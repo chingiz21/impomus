@@ -22,8 +22,9 @@ Import your playlists from Spotify to Youtube
 
 ### Browser extension(Chrome)
 
-![browser-extension](https://github.com/chingiz21/impomus/blob/main/client/src/imgs/forReadme/browser_extension.gif)
+https://user-images.githubusercontent.com/35367936/170573076-65d04875-9195-49b8-a965-5cbd30e8cbba.mp4
 
 ### Client-side
 
-![client-side](https://github.com/chingiz21/impomus/blob/main/client/src/imgs/forReadme/client.gif)
+https://user-images.githubusercontent.com/35367936/170572955-30e40238-5f8c-4724-81e5-07ff2fac4859.mp4
+
